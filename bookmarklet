@@ -1,0 +1,13 @@
+
+javascript:
+var socket;
+function myFunction() {
+  socket = io.connect("http://127.0.0.1:3000");
+  socket.emit("test","hi");
+}
+
+var script = document.createElement("script");
+script.src = "https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js";
+document.head.appendChild(script);
+setTimeout(myFunction, 1000);
+
